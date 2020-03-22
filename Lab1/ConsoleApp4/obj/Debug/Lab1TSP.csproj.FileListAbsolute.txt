@@ -1,0 +1,14 @@
+C:\Users\SBO\source\repos\ConsoleApp4\ConsoleApp4\bin\Debug\ConsoleApp4.exe.config
+C:\Users\SBO\source\repos\ConsoleApp4\ConsoleApp4\bin\Debug\ConsoleApp4.exe
+C:\Users\SBO\source\repos\ConsoleApp4\ConsoleApp4\bin\Debug\ConsoleApp4.pdb
+C:\Users\SBO\source\repos\ConsoleApp4\ConsoleApp4\obj\Debug\Lab1TSP.csprojAssemblyReference.cache
+C:\Users\SBO\source\repos\ConsoleApp4\ConsoleApp4\obj\Debug\Lab1TSP.csproj.CoreCompileInputs.cache
+C:\Users\SBO\source\repos\ConsoleApp4\ConsoleApp4\obj\Debug\ConsoleApp4.exe
+C:\Users\SBO\source\repos\ConsoleApp4\ConsoleApp4\obj\Debug\ConsoleApp4.pdb
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Lab1\ConsoleApp4\bin\Debug\ConsoleApp4.exe.config
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Lab1\ConsoleApp4\bin\Debug\ConsoleApp4.exe
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Lab1\ConsoleApp4\bin\Debug\ConsoleApp4.pdb
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Lab1\ConsoleApp4\obj\Debug\Lab1TSP.csprojAssemblyReference.cache
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Lab1\ConsoleApp4\obj\Debug\Lab1TSP.csproj.CoreCompileInputs.cache
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Lab1\ConsoleApp4\obj\Debug\ConsoleApp4.exe
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Lab1\ConsoleApp4\obj\Debug\ConsoleApp4.pdb

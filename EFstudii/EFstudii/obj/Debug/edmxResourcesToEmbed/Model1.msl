@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EFstudiiModelStoreContainer" CdmEntityContainer="ModelSelfReference">
+    <EntitySetMapping Name="SelfReferences">
+      <EntityTypeMapping TypeName="EFstudiiModel.SelfReference">
+        <MappingFragment StoreEntitySet="SelfReference">
+          <ScalarProperty Name="SelfReferenceId" ColumnName="SelfReferenceId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ParentSelfReferenceId" ColumnName="ParentSelfReferenceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

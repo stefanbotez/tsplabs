@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EFstudiiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="SelfReference">
+    <Key>
+      <PropertyRef Name="SelfReferenceId" />
+    </Key>
+    <Property Name="SelfReferenceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ParentSelfReferenceId" Type="Int32" />
+    <NavigationProperty Name="SelfReference1" Relationship="Self.FK__SelfRefer__Paren__37A5467C" FromRole="SelfReference" ToRole="SelfReference1" />
+    <NavigationProperty Name="SelfReference2" Relationship="Self.FK__SelfRefer__Paren__37A5467C" FromRole="SelfReference1" ToRole="SelfReference" />
+  </EntityType>
+  <Association Name="FK__SelfRefer__Paren__37A5467C">
+    <End Role="SelfReference" Type="Self.SelfReference" Multiplicity="0..1" />
+    <End Role="SelfReference1" Type="Self.SelfReference" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SelfReference">
+        <PropertyRef Name="SelfReferenceId" />
+      </Principal>
+      <Dependent Role="SelfReference1">
+        <PropertyRef Name="ParentSelfReferenceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelSelfReference" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SelfReferences" EntityType="Self.SelfReference" />
+    <AssociationSet Name="FK__SelfRefer__Paren__37A5467C" Association="Self.FK__SelfRefer__Paren__37A5467C">
+      <End Role="SelfReference" EntitySet="SelfReferences" />
+      <End Role="SelfReference1" EntitySet="SelfReferences" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

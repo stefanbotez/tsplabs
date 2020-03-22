@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EFstudiiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="SelfReference">
+    <Key>
+      <PropertyRef Name="SelfReferenceId" />
+    </Key>
+    <Property Name="SelfReferenceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="ParentSelfReferenceId" Type="int" />
+  </EntityType>
+  <Association Name="FK__SelfRefer__Paren__37A5467C">
+    <End Role="SelfReference" Type="Self.SelfReference" Multiplicity="0..1" />
+    <End Role="SelfReference1" Type="Self.SelfReference" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SelfReference">
+        <PropertyRef Name="SelfReferenceId" />
+      </Principal>
+      <Dependent Role="SelfReference1">
+        <PropertyRef Name="ParentSelfReferenceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EFstudiiModelStoreContainer">
+    <EntitySet Name="SelfReference" EntityType="Self.SelfReference" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__SelfRefer__Paren__37A5467C" Association="Self.FK__SelfRefer__Paren__37A5467C">
+      <End Role="SelfReference" EntitySet="SelfReference" />
+      <End Role="SelfReference1" EntitySet="SelfReference" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

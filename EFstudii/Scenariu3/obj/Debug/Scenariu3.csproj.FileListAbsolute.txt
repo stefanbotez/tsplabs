@@ -1,0 +1,14 @@
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\EFstudii\Scenariu3\bin\Debug\Scenariu3.exe.config
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\EFstudii\Scenariu3\bin\Debug\Scenariu3.exe
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\EFstudii\Scenariu3\bin\Debug\Scenariu3.pdb
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\EFstudii\Scenariu3\bin\Debug\EntityFramework.dll
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\EFstudii\Scenariu3\bin\Debug\EntityFramework.SqlServer.dll
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\EFstudii\Scenariu3\bin\Debug\EntityFramework.xml
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\EFstudii\Scenariu3\bin\Debug\EntityFramework.SqlServer.xml
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\EFstudii\Scenariu3\obj\Debug\Scenariu3.csprojAssemblyReference.cache
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\EFstudii\Scenariu3\obj\Debug\Scenariu3.Properties.Resources.resources
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\EFstudii\Scenariu3\obj\Debug\Scenariu3.csproj.GenerateResource.cache
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\EFstudii\Scenariu3\obj\Debug\Scenariu3.csproj.CoreCompileInputs.cache
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\EFstudii\Scenariu3\obj\Debug\Scenariu3.csproj.CopyComplete
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\EFstudii\Scenariu3\obj\Debug\Scenariu3.exe
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\EFstudii\Scenariu3\obj\Debug\Scenariu3.pdb

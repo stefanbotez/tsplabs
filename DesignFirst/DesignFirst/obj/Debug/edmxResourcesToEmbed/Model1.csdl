@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Media" EntityType="Model1.Media" />
+    <EntitySet Name="Tags" EntityType="Model1.Tags" />
+    <AssociationSet Name="MediaTags" Association="Model1.MediaTags">
+      <End Role="Media" EntitySet="Media" />
+      <End Role="Tags" EntitySet="Tags" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Media">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Path" Type="String" Nullable="false" />
+    <NavigationProperty Name="Tags" Relationship="Model1.MediaTags" FromRole="Media" ToRole="Tags" />
+  </EntityType>
+  <EntityType Name="Tags">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Key" Type="String" Nullable="false" />
+    <Property Name="Value" Type="String" Nullable="false" />
+    <NavigationProperty Name="Medium" Relationship="Model1.MediaTags" FromRole="Tags" ToRole="Media" />
+    <Property Name="MediaId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="MediaTags">
+    <End Type="Model1.Media" Role="Media" Multiplicity="1" />
+    <End Type="Model1.Tags" Role="Tags" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Media">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tags">
+        <PropertyRef Name="MediaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
