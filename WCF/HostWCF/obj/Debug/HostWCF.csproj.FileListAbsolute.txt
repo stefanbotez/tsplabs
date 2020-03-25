@@ -1,0 +1,17 @@
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\HostWCF\bin\Debug\HostWCF.exe.config
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\HostWCF\bin\Debug\HostWCF.exe
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\HostWCF\bin\Debug\HostWCF.pdb
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\HostWCF\bin\Debug\ObjectWCF.dll
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\HostWCF\bin\Debug\PostComment.dll
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\HostWCF\bin\Debug\EntityFramework.dll
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\HostWCF\bin\Debug\ObjectWCF.pdb
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\HostWCF\bin\Debug\PostComment.pdb
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\HostWCF\bin\Debug\PostComment.dll.config
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\HostWCF\bin\Debug\EntityFramework.xml
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\HostWCF\obj\Debug\HostWCF.csprojAssemblyReference.cache
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\HostWCF\obj\Debug\HostWCF.csproj.CoreCompileInputs.cache
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\HostWCF\obj\Debug\HostWCF.csproj.CopyComplete
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\HostWCF\obj\Debug\HostWCF.exe
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\HostWCF\obj\Debug\HostWCF.pdb
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\HostWCF\bin\Debug\EntityFramework.SqlServer.dll
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\HostWCF\bin\Debug\EntityFramework.SqlServer.xml

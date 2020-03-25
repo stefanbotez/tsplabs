@@ -1,0 +1,12 @@
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\PostComment\bin\Debug\PostComment.dll.config
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\PostComment\bin\Debug\PostComment.dll
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\PostComment\bin\Debug\PostComment.pdb
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\PostComment\bin\Debug\EntityFramework.dll
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\PostComment\bin\Debug\EntityFramework.SqlServer.dll
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\PostComment\bin\Debug\EntityFramework.xml
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\PostComment\bin\Debug\EntityFramework.SqlServer.xml
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\PostComment\obj\Debug\PostComment.csprojAssemblyReference.cache
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\PostComment\obj\Debug\PostComment.csproj.CoreCompileInputs.cache
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\PostComment\obj\Debug\PostComment.csproj.CopyComplete
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\PostComment\obj\Debug\PostComment.dll
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\PostComment\obj\Debug\PostComment.pdb

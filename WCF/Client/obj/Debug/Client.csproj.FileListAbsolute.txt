@@ -1,0 +1,10 @@
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\Client\bin\Debug\Client.exe.config
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\Client\bin\Debug\Client.exe
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\Client\bin\Debug\Client.pdb
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\Client\obj\Debug\Client.csprojAssemblyReference.cache
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\Client\obj\Debug\Client.Form1.resources
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\Client\obj\Debug\Client.Properties.Resources.resources
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\Client\obj\Debug\Client.csproj.GenerateResource.cache
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\Client\obj\Debug\Client.exe
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\Client\obj\Debug\Client.pdb
