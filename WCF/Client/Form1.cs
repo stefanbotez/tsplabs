@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ObjectsDTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,12 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using PostComment;
 namespace Client
 {
     public partial class Form1 : Form
     {
-        List<Post> posts = new List<Post>();
+        List<PostDTO> posts = new List<PostDTO>();
         public Form1()
         {
             InitializeComponent();
@@ -20,16 +20,16 @@ namespace Client
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            posts = LoadPosts().ToList<Post>();
+            posts = LoadPosts().ToList<PostDTO>();
             dgp.DataSource = posts;
             dgp.Columns[0].Width = 0;
             if (dgp.Rows.Count > 0)
                 dgc.DataSource = posts[0].Comments;
         }
-        private static PostComment.Post[] LoadPosts()
+        private static PostDTO[] LoadPosts()
         {
             PostCommentClient pc = new PostCommentClient();
-            PostComment.Post[] p = pc.GetPosts();
+            PostDTO[] p = pc.GetAllPosts();
             return p;
         }
 

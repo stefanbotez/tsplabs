@@ -59,6 +59,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ObjectsDTO\ObjectsDTO.csproj">
+      <Project>{8c9f8aa1-282d-46b4-bbd1-82d39b1e3ce0}</Project>
+      <Name>ObjectsDTO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ObjectWCF\ObjectWCF.csproj">
       <Project>{b52d77aa-4c3f-4d76-a409-4a10ac63efb4}</Project>
       <Name>ObjectWCF</Name>

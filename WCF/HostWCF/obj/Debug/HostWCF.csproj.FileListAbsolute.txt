@@ -15,3 +15,8 @@ F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\HostWCF\obj\Debug\HostWCF.exe
 F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\HostWCF\obj\Debug\HostWCF.pdb
 F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\HostWCF\bin\Debug\EntityFramework.SqlServer.dll
 F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\HostWCF\bin\Debug\EntityFramework.SqlServer.xml
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\HostWCF\bin\Debug\ObjectsDTO.dll
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\HostWCF\bin\Debug\AutoMapper.dll
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\HostWCF\bin\Debug\ObjectsDTO.pdb
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\HostWCF\bin\Debug\AutoMapper.pdb
+F:\Downloads\UAIC\Anul3\sem2\TSPNET\Labs\WCF\HostWCF\bin\Debug\AutoMapper.xml

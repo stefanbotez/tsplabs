@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostWCF", "HostWCF\HostWCF.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{1624E955-9F00-4B63-BCAF-90053A242D22}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectsDTO", "ObjectsDTO\ObjectsDTO.csproj", "{8C9F8AA1-282D-46B4-BBD1-82D39B1E3CE0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{1624E955-9F00-4B63-BCAF-90053A242D22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1624E955-9F00-4B63-BCAF-90053A242D22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1624E955-9F00-4B63-BCAF-90053A242D22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C9F8AA1-282D-46B4-BBD1-82D39B1E3CE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C9F8AA1-282D-46B4-BBD1-82D39B1E3CE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C9F8AA1-282D-46B4-BBD1-82D39B1E3CE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C9F8AA1-282D-46B4-BBD1-82D39B1E3CE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

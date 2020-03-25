@@ -8,27 +8,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PostComment
+namespace ObjectsDTO
 {
     using System.Runtime.Serialization;
-
+    
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Post", Namespace="http://schemas.datacontract.org/2004/07/PostComment", IsReference=true)]
-    public partial class Post : object, System.Runtime.Serialization.IExtensibleDataObject
+    [System.Runtime.Serialization.DataContractAttribute(Name="PostDTO", Namespace="http://schemas.datacontract.org/2004/07/ObjectsDTO")]
+    public partial class PostDTO : object, System.Runtime.Serialization.IExtensibleDataObject
     {
         
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
-        private PostComment.Comment[] CommentsField;
-        
-        private System.DateTime DateField;
-        
-        private string DescriptionField;
-        
-        private string DomainField;
+        private ObjectsDTO.CommentDTO[] CommentsField;
         
         private int PostIdField;
+        
+        private string TitleField;
         
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData
         {
@@ -43,7 +40,7 @@ namespace PostComment
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PostComment.Comment[] Comments
+        public ObjectsDTO.CommentDTO[] Comments
         {
             get
             {
@@ -52,45 +49,6 @@ namespace PostComment
             set
             {
                 this.CommentsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime Date
-        {
-            get
-            {
-                return this.DateField;
-            }
-            set
-            {
-                this.DateField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description
-        {
-            get
-            {
-                return this.DescriptionField;
-            }
-            set
-            {
-                this.DescriptionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Domain
-        {
-            get
-            {
-                return this.DomainField;
-            }
-            set
-            {
-                this.DomainField = value;
             }
         }
         
@@ -106,23 +64,38 @@ namespace PostComment
                 this.PostIdField = value;
             }
         }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Title
+        {
+            get
+            {
+                return this.TitleField;
+            }
+            set
+            {
+                this.TitleField = value;
+            }
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Comment", Namespace="http://schemas.datacontract.org/2004/07/PostComment", IsReference=true)]
-    public partial class Comment : object, System.Runtime.Serialization.IExtensibleDataObject
+    [System.Runtime.Serialization.DataContractAttribute(Name="CommentDTO", Namespace="http://schemas.datacontract.org/2004/07/ObjectsDTO", IsReference=true)]
+    public partial class CommentDTO : object, System.Runtime.Serialization.IExtensibleDataObject
     {
         
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         private int CommentIdField;
         
-        private PostComment.Post PostField;
+        private string CommentTextField;
+        
+        private ObjectsDTO.PostDTO PostField;
+        
+        private int PostIdField;
         
         private int PostPostIdField;
-        
-        private string TextField;
         
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData
         {
@@ -150,7 +123,20 @@ namespace PostComment
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PostComment.Post Post
+        public string CommentText
+        {
+            get
+            {
+                return this.CommentTextField;
+            }
+            set
+            {
+                this.CommentTextField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ObjectsDTO.PostDTO Post
         {
             get
             {
@@ -159,6 +145,19 @@ namespace PostComment
             set
             {
                 this.PostField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PostId
+        {
+            get
+            {
+                return this.PostIdField;
+            }
+            set
+            {
+                this.PostIdField = value;
             }
         }
         
@@ -174,19 +173,6 @@ namespace PostComment
                 this.PostPostIdField = value;
             }
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Text
-        {
-            get
-            {
-                return this.TextField;
-            }
-            set
-            {
-                this.TextField = value;
-            }
-        }
     }
 }
 
@@ -196,53 +182,65 @@ namespace PostComment
 public interface IPostComment
 {
     
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InterfacePost/AddPost", ReplyAction="http://tempuri.org/InterfacePost/AddPostResponse")]
-    bool AddPost(PostComment.Post post);
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPost/Cleanup", ReplyAction="http://tempuri.org/IPost/CleanupResponse")]
+    void Cleanup();
     
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InterfacePost/AddPost", ReplyAction="http://tempuri.org/InterfacePost/AddPostResponse")]
-    System.Threading.Tasks.Task<bool> AddPostAsync(PostComment.Post post);
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPost/Cleanup", ReplyAction="http://tempuri.org/IPost/CleanupResponse")]
+    System.Threading.Tasks.Task CleanupAsync();
     
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InterfacePost/UpdatePost", ReplyAction="http://tempuri.org/InterfacePost/UpdatePostResponse")]
-    PostComment.Post UpdatePost(PostComment.Post post);
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPost/GetPostById", ReplyAction="http://tempuri.org/IPost/GetPostByIdResponse")]
+    ObjectsDTO.PostDTO GetPostById(int id);
     
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InterfacePost/UpdatePost", ReplyAction="http://tempuri.org/InterfacePost/UpdatePostResponse")]
-    System.Threading.Tasks.Task<PostComment.Post> UpdatePostAsync(PostComment.Post post);
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPost/GetPostById", ReplyAction="http://tempuri.org/IPost/GetPostByIdResponse")]
+    System.Threading.Tasks.Task<ObjectsDTO.PostDTO> GetPostByIdAsync(int id);
     
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InterfacePost/DeletePost", ReplyAction="http://tempuri.org/InterfacePost/DeletePostResponse")]
-    int DeletePost(int id);
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPost/SubmitPost", ReplyAction="http://tempuri.org/IPost/SubmitPostResponse")]
+    bool SubmitPost(ObjectsDTO.PostDTO post);
     
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InterfacePost/DeletePost", ReplyAction="http://tempuri.org/InterfacePost/DeletePostResponse")]
-    System.Threading.Tasks.Task<int> DeletePostAsync(int id);
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPost/SubmitPost", ReplyAction="http://tempuri.org/IPost/SubmitPostResponse")]
+    System.Threading.Tasks.Task<bool> SubmitPostAsync(ObjectsDTO.PostDTO post);
     
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InterfacePost/GetPostById", ReplyAction="http://tempuri.org/InterfacePost/GetPostByIdResponse")]
-    PostComment.Post GetPostById(int id);
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPost/UpdatePost", ReplyAction="http://tempuri.org/IPost/UpdatePostResponse")]
+    ObjectsDTO.PostDTO UpdatePost(ObjectsDTO.PostDTO newPost);
     
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InterfacePost/GetPostById", ReplyAction="http://tempuri.org/InterfacePost/GetPostByIdResponse")]
-    System.Threading.Tasks.Task<PostComment.Post> GetPostByIdAsync(int id);
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPost/UpdatePost", ReplyAction="http://tempuri.org/IPost/UpdatePostResponse")]
+    System.Threading.Tasks.Task<ObjectsDTO.PostDTO> UpdatePostAsync(ObjectsDTO.PostDTO newPost);
     
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InterfacePost/GetPosts", ReplyAction="http://tempuri.org/InterfacePost/GetPostsResponse")]
-    PostComment.Post[] GetPosts();
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPost/DeletePost", ReplyAction="http://tempuri.org/IPost/DeletePostResponse")]
+    int DeletePost(int postId);
     
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InterfacePost/GetPosts", ReplyAction="http://tempuri.org/InterfacePost/GetPostsResponse")]
-    System.Threading.Tasks.Task<PostComment.Post[]> GetPostsAsync();
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPost/DeletePost", ReplyAction="http://tempuri.org/IPost/DeletePostResponse")]
+    System.Threading.Tasks.Task<int> DeletePostAsync(int postId);
     
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InterfaceComment/AddComment", ReplyAction="http://tempuri.org/InterfaceComment/AddCommentResponse")]
-    bool AddComment(PostComment.Comment comment);
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPost/GetAllPosts", ReplyAction="http://tempuri.org/IPost/GetAllPostsResponse")]
+    ObjectsDTO.PostDTO[] GetAllPosts();
     
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InterfaceComment/AddComment", ReplyAction="http://tempuri.org/InterfaceComment/AddCommentResponse")]
-    System.Threading.Tasks.Task<bool> AddCommentAsync(PostComment.Comment comment);
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPost/GetAllPosts", ReplyAction="http://tempuri.org/IPost/GetAllPostsResponse")]
+    System.Threading.Tasks.Task<ObjectsDTO.PostDTO[]> GetAllPostsAsync();
     
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InterfaceComment/UpdateComment", ReplyAction="http://tempuri.org/InterfaceComment/UpdateCommentResponse")]
-    PostComment.Comment UpdateComment(PostComment.Comment newComment);
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComment/GetCommentById", ReplyAction="http://tempuri.org/IComment/GetCommentByIdResponse")]
+    ObjectsDTO.CommentDTO GetCommentById(int id);
     
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InterfaceComment/UpdateComment", ReplyAction="http://tempuri.org/InterfaceComment/UpdateCommentResponse")]
-    System.Threading.Tasks.Task<PostComment.Comment> UpdateCommentAsync(PostComment.Comment newComment);
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComment/GetCommentById", ReplyAction="http://tempuri.org/IComment/GetCommentByIdResponse")]
+    System.Threading.Tasks.Task<ObjectsDTO.CommentDTO> GetCommentByIdAsync(int id);
     
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InterfaceComment/GetCommentById", ReplyAction="http://tempuri.org/InterfaceComment/GetCommentByIdResponse")]
-    PostComment.Comment GetCommentById(int id);
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComment/SubmitComment", ReplyAction="http://tempuri.org/IComment/SubmitCommentResponse")]
+    bool SubmitComment(ObjectsDTO.CommentDTO comment);
     
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InterfaceComment/GetCommentById", ReplyAction="http://tempuri.org/InterfaceComment/GetCommentByIdResponse")]
-    System.Threading.Tasks.Task<PostComment.Comment> GetCommentByIdAsync(int id);
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComment/SubmitComment", ReplyAction="http://tempuri.org/IComment/SubmitCommentResponse")]
+    System.Threading.Tasks.Task<bool> SubmitCommentAsync(ObjectsDTO.CommentDTO comment);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComment/UpdateComment", ReplyAction="http://tempuri.org/IComment/UpdateCommentResponse")]
+    ObjectsDTO.CommentDTO UpdateComment(ObjectsDTO.CommentDTO newComment);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComment/UpdateComment", ReplyAction="http://tempuri.org/IComment/UpdateCommentResponse")]
+    System.Threading.Tasks.Task<ObjectsDTO.CommentDTO> UpdateCommentAsync(ObjectsDTO.CommentDTO newComment);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILoadData/GetAllPostsAndRelatedComments", ReplyAction="http://tempuri.org/ILoadData/GetAllPostsAndRelatedCommentsResponse")]
+    ObjectsDTO.PostDTO[] GetAllPostsAndRelatedComments();
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILoadData/GetAllPostsAndRelatedComments", ReplyAction="http://tempuri.org/ILoadData/GetAllPostsAndRelatedCommentsResponse")]
+    System.Threading.Tasks.Task<ObjectsDTO.PostDTO[]> GetAllPostsAndRelatedCommentsAsync();
 }
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -279,83 +277,103 @@ public partial class PostCommentClient : System.ServiceModel.ClientBase<IPostCom
     {
     }
     
-    public bool AddPost(PostComment.Post post)
+    public void Cleanup()
     {
-        return base.Channel.AddPost(post);
+        base.Channel.Cleanup();
     }
     
-    public System.Threading.Tasks.Task<bool> AddPostAsync(PostComment.Post post)
+    public System.Threading.Tasks.Task CleanupAsync()
     {
-        return base.Channel.AddPostAsync(post);
+        return base.Channel.CleanupAsync();
     }
     
-    public PostComment.Post UpdatePost(PostComment.Post post)
-    {
-        return base.Channel.UpdatePost(post);
-    }
-    
-    public System.Threading.Tasks.Task<PostComment.Post> UpdatePostAsync(PostComment.Post post)
-    {
-        return base.Channel.UpdatePostAsync(post);
-    }
-    
-    public int DeletePost(int id)
-    {
-        return base.Channel.DeletePost(id);
-    }
-    
-    public System.Threading.Tasks.Task<int> DeletePostAsync(int id)
-    {
-        return base.Channel.DeletePostAsync(id);
-    }
-    
-    public PostComment.Post GetPostById(int id)
+    public ObjectsDTO.PostDTO GetPostById(int id)
     {
         return base.Channel.GetPostById(id);
     }
     
-    public System.Threading.Tasks.Task<PostComment.Post> GetPostByIdAsync(int id)
+    public System.Threading.Tasks.Task<ObjectsDTO.PostDTO> GetPostByIdAsync(int id)
     {
         return base.Channel.GetPostByIdAsync(id);
     }
     
-    public PostComment.Post[] GetPosts()
+    public bool SubmitPost(ObjectsDTO.PostDTO post)
     {
-        return base.Channel.GetPosts();
+        return base.Channel.SubmitPost(post);
     }
     
-    public System.Threading.Tasks.Task<PostComment.Post[]> GetPostsAsync()
+    public System.Threading.Tasks.Task<bool> SubmitPostAsync(ObjectsDTO.PostDTO post)
     {
-        return base.Channel.GetPostsAsync();
+        return base.Channel.SubmitPostAsync(post);
     }
     
-    public bool AddComment(PostComment.Comment comment)
+    public ObjectsDTO.PostDTO UpdatePost(ObjectsDTO.PostDTO newPost)
     {
-        return base.Channel.AddComment(comment);
+        return base.Channel.UpdatePost(newPost);
     }
     
-    public System.Threading.Tasks.Task<bool> AddCommentAsync(PostComment.Comment comment)
+    public System.Threading.Tasks.Task<ObjectsDTO.PostDTO> UpdatePostAsync(ObjectsDTO.PostDTO newPost)
     {
-        return base.Channel.AddCommentAsync(comment);
+        return base.Channel.UpdatePostAsync(newPost);
     }
     
-    public PostComment.Comment UpdateComment(PostComment.Comment newComment)
+    public int DeletePost(int postId)
     {
-        return base.Channel.UpdateComment(newComment);
+        return base.Channel.DeletePost(postId);
     }
     
-    public System.Threading.Tasks.Task<PostComment.Comment> UpdateCommentAsync(PostComment.Comment newComment)
+    public System.Threading.Tasks.Task<int> DeletePostAsync(int postId)
     {
-        return base.Channel.UpdateCommentAsync(newComment);
+        return base.Channel.DeletePostAsync(postId);
     }
     
-    public PostComment.Comment GetCommentById(int id)
+    public ObjectsDTO.PostDTO[] GetAllPosts()
+    {
+        return base.Channel.GetAllPosts();
+    }
+    
+    public System.Threading.Tasks.Task<ObjectsDTO.PostDTO[]> GetAllPostsAsync()
+    {
+        return base.Channel.GetAllPostsAsync();
+    }
+    
+    public ObjectsDTO.CommentDTO GetCommentById(int id)
     {
         return base.Channel.GetCommentById(id);
     }
     
-    public System.Threading.Tasks.Task<PostComment.Comment> GetCommentByIdAsync(int id)
+    public System.Threading.Tasks.Task<ObjectsDTO.CommentDTO> GetCommentByIdAsync(int id)
     {
         return base.Channel.GetCommentByIdAsync(id);
+    }
+    
+    public bool SubmitComment(ObjectsDTO.CommentDTO comment)
+    {
+        return base.Channel.SubmitComment(comment);
+    }
+    
+    public System.Threading.Tasks.Task<bool> SubmitCommentAsync(ObjectsDTO.CommentDTO comment)
+    {
+        return base.Channel.SubmitCommentAsync(comment);
+    }
+    
+    public ObjectsDTO.CommentDTO UpdateComment(ObjectsDTO.CommentDTO newComment)
+    {
+        return base.Channel.UpdateComment(newComment);
+    }
+    
+    public System.Threading.Tasks.Task<ObjectsDTO.CommentDTO> UpdateCommentAsync(ObjectsDTO.CommentDTO newComment)
+    {
+        return base.Channel.UpdateCommentAsync(newComment);
+    }
+    
+    public ObjectsDTO.PostDTO[] GetAllPostsAndRelatedComments()
+    {
+        return base.Channel.GetAllPostsAndRelatedComments();
+    }
+    
+    public System.Threading.Tasks.Task<ObjectsDTO.PostDTO[]> GetAllPostsAndRelatedCommentsAsync()
+    {
+        return base.Channel.GetAllPostsAndRelatedCommentsAsync();
     }
 }
