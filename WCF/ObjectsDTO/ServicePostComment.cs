@@ -13,23 +13,6 @@ namespace ObjectsDTO
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
     public class ServicePostComment : IPostComment
     {
-        /// <summary>
-        /// Instanta a clasei ServicePost, clasa ce expune metode de lucru cu EF pentru
-        /// baza de date WCF.
-        /// Exemplu de cod din aceasta clasa, ServicePost. Vedeti acces la context.
-        /// public List<Post> GetAll()
-        /// {
-        /// List<Post> lp = new List<Post>();
-        /// using (var context = new ModelPostBlogContainer())
-        /// {
-        /// lp = context.Posts.Include(p => p.Comments).ToList();
-        /// }
-        /// return lp;
-        /// }
-        /// </summary>
-        //
-        // In ctor configurez AutoMapper
-        //
         MapperConfiguration config;
         IMapper iMapper;
         public ServicePostComment()
@@ -46,48 +29,16 @@ namespace ObjectsDTO
         {
             Cleanup();
         }
-        // Interfata ILoadData
         public List<PostDTO> GetAllPosts()
         {
             var lp = API.GetAllPosts();
-            // Constructie lista PostDTO
             List<PostDTO> lpDto = new List<PostDTO>();
             lpDto = iMapper.Map<List<Post>, List<PostDTO>>(lp);
             return lpDto;
-            #region Comentariu
-            /* Cam acest lucru face AutoMapper.
-           Construieste DTO din obiectele din server (EF)
-            foreach (var p in lp)
-            {
-            PostDTO pd = new PostDTO()
-            {
-            PostId = p.PostId,
-           Title = p.Title
-            };
-            if (p.Comments.Count > 0)
-            {
-            foreach (var c in p.Comments)
-           {
-            //pd.Comments = new List<CommentDTO>();
-           CommentDTO cd = new CommentDTO();
-           cd.CommentId = c.CommentId;
-           cd.CommentText = c.CommentText;
-           //cd.PostId = c.PostId;
-           //cd.PostPostId = c.PostPostId;
-           pd.Comments.Add(cd);
-            }
-            }
-            lpDto.Add(pd);
-            }
-            return lpDto;
-            */
-            #endregion
         }
-        // IPost implementation methods
         public PostDTO GetPostById(int id)
         {
             Post post = API.GetPostById(id);
-            // Reconstructie obiecte cunoscute in serviciu
             PostDTO postDTO = iMapper.Map<Post, PostDTO>(post);
             return postDTO;
         }
